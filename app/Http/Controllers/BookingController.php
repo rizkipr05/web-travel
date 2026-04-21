@@ -43,6 +43,7 @@ class BookingController extends Controller
             'phone' => $request->phone,
             'pickup_address' => $request->pickup,
             'dropoff_address' => $request->dropoff,
+            'total_passengers' => count($seats),
             'total_price' => $total_price,
             'status' => 'pending',
             'booking_code' => 'SM-' . strtoupper(\Str::random(8)),
@@ -78,6 +79,14 @@ class BookingController extends Controller
         }
     }
 
+    public function payment($id)
+    {
+        $booking = \App\Models\Booking::where('user_id', \Auth::id())->findOrFail($id);
+        $snapToken = $booking->payment_token;
+        
+        return view('pages.payment', compact('booking', 'snapToken'));
+    }
+
     public function myBookings()
     {
         $bookings = \App\Models\Booking::where('user_id', \Auth::id())
@@ -97,7 +106,7 @@ class BookingController extends Controller
     public function ticket($id)
     {
         $booking = \App\Models\Booking::with(['schedule.route', 'bookedSeats'])
-            ->where('user_id', Auth::id())
+            ->where('user_id', \Auth::id())
             ->findOrFail($id);
             
         return view('pages.ticket', compact('booking'));

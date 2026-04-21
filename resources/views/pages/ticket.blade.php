@@ -89,7 +89,7 @@
     <div class="boarding-pass-wrapper animate-slide-up">
         <!-- Sidebar -->
         <div class="pass-sidebar d-none d-lg-flex">
-            <i class="fas fa-plane fs-3 opacity-50"></i>
+            <i class="fas fa-shuttle-van fs-3 opacity-50"></i>
             <div class="vertical-text uppercase">SAFA MARWA OFFICIAL TICKET</div>
             <i class="fas fa-barcode fs-3 opacity-50"></i>
         </div>
@@ -164,7 +164,7 @@
             </div>
             
             <div class="text-center mt-5 opacity-25">
-                <p class="smaller fw-bold mb-0">THANK YOU FOR FLYING WITH SAFA MARWA</p>
+                <p class="smaller fw-bold mb-0">TERIMA KASIH TELAH MEMILIH LAYANAN SAFA MARWA</p>
             </div>
         </div>
     </div>

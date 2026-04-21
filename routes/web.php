@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PublicController;
 use App\Http\Controllers\SearchController;
 use App\Http\Controllers\BookingController;
+use App\Http\Controllers\MidtransCallbackController;
 
 Route::get('/', [PublicController::class, 'index']);
 Route::get('/search', [SearchController::class, 'index']);
@@ -24,6 +25,8 @@ Route::middleware('auth')->group(function () {
     Route::get('/profile', [BookingController::class, 'profile']);
     Route::post('/profile/update', [BookingController::class, 'updateProfile']);
 });
+
+Route::post('/midtrans/callback', [MidtransCallbackController::class, 'handleCallback']);
 
 // Auth Routes
 Route::get('/login', [\App\Http\Controllers\Auth\AuthController::class, 'showLogin'])->name('login');
@@ -56,6 +59,5 @@ Route::middleware(['auth', 'admin'])->prefix('admin')->group(function () {
     Route::put('/schedules/{id}', [\App\Http\Controllers\Admin\AdminController::class, 'updateSchedule']);
     Route::delete('/schedules/{id}', [\App\Http\Controllers\Admin\AdminController::class, 'deleteSchedule']);
     
-    Route::get('/offers', [\App\Http\Controllers\Admin\AdminController::class, 'manageOffers']);
     Route::get('/profile', [\App\Http\Controllers\Admin\AdminController::class, 'profile']);
 });

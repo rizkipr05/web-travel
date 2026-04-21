@@ -117,9 +117,6 @@
             <a href="{{ url('/admin/bookings') }}" class="sidebar-link {{ Request::is('admin/bookings*') ? 'active' : '' }}">
                 <i class="fas fa-shopping-bag"></i> <span>Transaksi</span>
             </a>
-            <a href="{{ url('/admin/offers') }}" class="sidebar-link {{ Request::is('admin/offers*') ? 'active' : '' }}">
-                <i class="fas fa-percentage"></i> <span>Penawaran</span>
-            </a>
             <a href="{{ url('/admin/profile') }}" class="sidebar-link {{ Request::is('admin/profile*') ? 'active' : '' }}">
                 <i class="fas fa-user-circle"></i> <span>Profil Saya</span>
             </a>

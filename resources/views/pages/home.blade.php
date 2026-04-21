@@ -14,7 +14,7 @@
                             Tingkatkan Perjalanan Anda
                         </span>
                         <h1 class="display-2 fw-800 text-primary mb-4" style="line-height: 1.1">
-                            Rasakan Keajaiban <br> <span class="text-primary-light">Penerbangan!</span>
+                            Rasakan Keajaiban <br> <span class="text-primary-light">Perjalanan!</span>
                         </h1>
                         <p class="lead text-muted mb-5 pe-lg-5">
                             Jelajahi dunia dengan kenyamanan tanpa batas. Safa Marwa hadir untuk memastikan setiap mil perjalanan Anda menjadi kenangan yang tak terlupakan.
@@ -42,7 +42,7 @@
                 </div>
                 <div class="col-lg-6 d-none d-lg-block position-relative">
                     <div class="hero-image-container animate-float">
-                        <img src="{{ asset('img/hero_airplane.png') }}" alt="Travel" class="img-fluid rounded-5 shadow-xl">
+                        <img src="{{ asset('img/hero_travel_car.png') }}" alt="Travel" class="img-fluid rounded-5 shadow-xl">
                         
                         <!-- Floating Glass Card -->
                         <div class="category-box glass-card position-absolute bottom-0 end-0 m-4 animate-slide-up">
@@ -88,7 +88,7 @@
             <div class="col-lg-3">
                 <label class="form-label fw-bold text-primary small mb-3">Kedatangan</label>
                 <div class="position-relative">
-                    <i class="fas fa-plane-arrival position-absolute top-50 translate-middle-y ms-3 text-primary-light"></i>
+                    <i class="fas fa-location-dot position-absolute top-50 translate-middle-y ms-3 text-primary-light"></i>
                     <select name="destination" class="form-input-premium ps-5" required>
                         <option value="">Pilih Tujuan</option>
                         @foreach($destinations as $dest)
